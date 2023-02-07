@@ -9,13 +9,11 @@ body {
   overflow: hidden;
   padding: 0%;
   margin: 0%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: $bg-cont;
 
   input {
     all: unset;
   }
-
-  /* barra da esquerda */
   .sidebar {
     position: fixed;
     width: 400px;
@@ -23,7 +21,6 @@ body {
     padding: 5px 10px 5px 10px;
     background-color: $bg-side;
     
-    /* texto 'encontrar dev... */
     h1 {
       color: $text-1;
       left: 25px;
@@ -33,10 +30,8 @@ body {
       font-weight: 800;
       font-size: 20px;
       line-height: 25px;
-
-
     }
-    /* caixa de pesquisa */
+
     .searchbox {
       height: 60px;
       width: 350px;
@@ -51,7 +46,6 @@ body {
       align-items: center;
       padding: 0px 15px 0px 15px;
 
-      /* texto da caixa de pesquisa */
       .searchtext {
         font-family: 'Roboto';
         font-style: normal;
@@ -63,7 +57,6 @@ body {
         margin:auto;
       }
 
-      /* botão de buscar */
       .searchbutton {
         cursor: pointer;
         box-sizing: border-box;
@@ -78,9 +71,7 @@ body {
         font-size: 14px;
         line-height: 16px;
         color: #fff;
-
       }
-    
     }
 
     .loading {

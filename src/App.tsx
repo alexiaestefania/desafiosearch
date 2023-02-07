@@ -26,7 +26,7 @@ function App() {
   const [followers, setFollowers] = useState("Aguardando");
   const [following, setFollowing] = useState("Aguardando");
   const [public_repos, setPublicrepos] = useState("Aguardando");
-  const [reposurl, setReposurl] = useState("Aguardando");
+  const [repos, setRepos] = useState("Aguardando");
   const [showResults, setShowResults] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
 
@@ -41,8 +41,8 @@ function App() {
       setAvatarUrl(res.data.avatar_url);
       setFollowers(res.data.followers);
       setFollowing(res.data.following);
-      setReposurl(res.data.repos_url);
       setPublicrepos(res.data.public_repos);
+      setRepos(res.data.repos_url);
       setShowResults(true)
       console.log(res.data);
     })
@@ -50,6 +50,7 @@ function App() {
       console.log(err);
     });
   };
+
 
   const Results = () => (
     <div id="results" className={styles.usernamelist}>
@@ -92,9 +93,13 @@ function App() {
           </div>
       </div>
       
-      Repositórios
+      <h3>Repositórios</h3>
+
       <div className={cardstyles.ReposList}>
-        we need a for loop in here...
+
+        </div>
+      </div>
+        
 
 
       </div>

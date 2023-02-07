@@ -1,12 +1,13 @@
 $text-1: #1A235B;
 $text-2: #3A8E3D;
+$bg-1: #F4F7FE;
 
 .Indexcard {
     cursor: pointer;
     width: 380px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #ffffff99;
+    box-shadow: 0px 4px 4px #00000040;
     border-radius: 8px;
     margin: auto;
     position: relative;
@@ -39,8 +40,8 @@ $text-2: #3A8E3D;
             position: relative;
             top: 0px;
             flex:auto;
-            
         }
+
         .in_username {
             font-family: 'Roboto';
             text-decoration: none;
@@ -50,8 +51,8 @@ $text-2: #3A8E3D;
             color: $text-2;
             position: relative;
             line-height: 16px;
-           
         }
+
     }
     
     .chevron {
