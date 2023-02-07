@@ -1,0 +1,80 @@
+$text-1: #1A235B;
+$text-2: #3A8E3D;
+
+.Indexcard {
+    
+    width: 380px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+        
+    .in_avi {
+        margin-left: 15px;
+        position: relative;
+        width: 66px;
+        height: 66px;
+        border: 1px solid  $text-1;
+        border-radius: 100%;
+    }
+
+    .namelist {
+        margin-left: 15px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        .in_name {
+            font-family: 'Roboto';
+            line-height: 21px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            color: $text-1;
+            position: relative;
+            top: 0px;
+            flex:auto;
+            
+        }
+        .in_username {
+            font-family: 'Roboto';
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 10;
+            font-size: 14px;
+            color: $text-2;
+            position: relative;
+            line-height: 16px;
+           
+        }
+    }
+    
+    .chevron {
+        text-align: right;
+        float: right;
+        margin: auto;
+        margin-right: 15px;
+    }
+
+}
+
+.UserDetail {
+    position: relative;
+    display: block;
+    background-color: aqua;
+    width: 767px;
+    height: 319px;
+    left: 567px;
+    top: 85px;
+    img {
+        border-radius: 100%;
+        width: 196px;
+        height: 196px;
+        border: 1px solid #1C255C;
+    }
+}
