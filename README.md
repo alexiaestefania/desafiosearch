@@ -4,8 +4,8 @@ Este projeto é a resposta a um desafio front-end. Consiste em uma SPA simples q
 
 # Instruções de uso
 
-1. clone este projeto a partir do github.
-2. No terminal, (recomenda-se o terminal dentro do VS Code) navegue para o diretório principal do projeto, 'github_search'.
+1. Clone este projeto a partir do github.
+2. No terminal, (recomenda-se o terminal dentro do VS Code) navegue para o diretório principal do projeto, se já não está nele
 3. Execute o commando: 
 
 ### `npm install`
