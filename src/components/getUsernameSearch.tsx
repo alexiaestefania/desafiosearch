@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { UserDataRes } from "../types/types";
-import { joinedDate } from './joinedDate';
+import { joinedDate } from './FormatJoinedDate';
 import { Showrepos } from './Showrepos';
 
 export function getUsernameSearch(setShowDetail: any, username: string, setName: any, setHandle: any, setBio: any, setAvatarUrl: any, setFollowers: any, setFollowing: any, setgithublink: any, setPublicrepos: any, setjoindate: any, setShowResults: any, setRepos: any) {

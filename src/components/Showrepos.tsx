@@ -1,6 +1,6 @@
 import cardstyles from './cards.module.scss';
-import { CreatedDate } from './CreatedDate';
-import { UpdatedDate } from './UpdatedDate';
+import { CreatedDate } from './FormatCreatedDate';
+import { UpdatedDate } from './FormatUpdatedDate';
 
 export function Showrepos(res: any, setRepos: any) {
   const list = res.data.map((item: any) => (
