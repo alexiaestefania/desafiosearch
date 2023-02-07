@@ -1,16 +1,16 @@
+# Sobre este projeto React
+
+Este projeto é a resposta a um desafio front-end. Consiste em uma SPA simples que realiza pesquisas de usuários do GitHub.
+
 # Instruções de uso
 
-É necessário que node.js esteja instalado na máquina.
-Primeiramente, clone este projeto a partir do github.
-No terminal, (recomenda-se o terminal dentro do VS Code) navegue para o diretório principal do projeto, 'github_search'.
-
-Execute o commando: 
+1. clone este projeto a partir do github.
+2. No terminal, (recomenda-se o terminal dentro do VS Code) navegue para o diretório principal do projeto, 'github_search'.
+3. Execute o commando: 
 
 ### `npm install`
 
-## Vendo a página
-
-No terminal, execute o commando:
+Para visualizar a página , execute o commando:
 
 ### `npm start`
 
