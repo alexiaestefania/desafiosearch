@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import styles from './App.module.scss';
 import searchsvg from "./assets/search.svg"
+import idle from "./assets/searchlarge.svg"
 import chevron from "./assets/chevron-right.svg";
 import cardstyles from './cards.module.scss';
 
@@ -13,6 +14,7 @@ type githubresponse = {
   followers: string;
   following: string;
   repos_url: string;
+  public_repos: string;
 }
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   const [bio, setBio] = useState("Aguardando");
   const [followers, setFollowers] = useState("Aguardando");
   const [following, setFollowing] = useState("Aguardando");
+  const [public_repos, setPublicrepos] = useState("Aguardando");
   const [reposurl, setReposurl] = useState("Aguardando");
   const [showResults, setShowResults] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
@@ -39,6 +42,7 @@ function App() {
       setFollowers(res.data.followers);
       setFollowing(res.data.following);
       setReposurl(res.data.repos_url);
+      setPublicrepos(res.data.public_repos);
       setShowResults(true)
       console.log(res.data);
     })
@@ -53,27 +57,48 @@ function App() {
           <img className={cardstyles.in_avi} src={avatar_url} alt="user avatar" />
           <div className={cardstyles.namelist}>
             <span className={cardstyles.in_name}>{name} <br></br>
-            <a 
-            className={cardstyles.in_username}>@{handle}</a> </span>
+            <span className={cardstyles.in_username}>@{handle}</span> </span>
           </div>
-          <img className={cardstyles.chevron} src={chevron} />
+          <img className={cardstyles.chevron} src={chevron} alt="arrow to the right"/>
       </div> 
     </div>
   );
 
   const Loading = () => (
     <div id="detailresult" className={styles.Loading}> 
-      this is the loading part
+      <span>PESQUISE UM PERFIL DO GITHUB</span>
+      <img src={idle} alt="" />
     </div>
   );
 
   const UserDetail = () => (
     <div id="detailresult"> 
+      <h3>Detalhes do Perfil</h3>
       <div className={cardstyles.UserDetail}>
-        <img className={cardstyles.Avatar} src={avatar_url} alt="" />
-        <span>{name}</span>
-        <span>{bio}</span>
+        <img className={cardstyles.Avatar} src={avatar_url} alt="User Avatar" />
+        <div className={cardstyles.Userdata}>
+          <h1>{name}</h1>
+          <h2>@{handle}</h2>
+          <span>{bio}</span>
+          <span>Join Date</span>
+          <div className={cardstyles.UserStats}>
+            <div className={cardstyles.StatsGridH}>Repositórios</div>
+            <div className={cardstyles.StatsGridH}>Seguidores</div>
+            <div className={cardstyles.StatsGridH}>Seguindo</div>
+            <div className={cardstyles.StatsGridItem}>{public_repos}</div>
+            <div className={cardstyles.StatsGridItem}>{followers}</div>
+            <div className={cardstyles.StatsGridItem}>{following}</div>
+            </div>
+          </div>
       </div>
+      
+      Repositórios
+      <div className={cardstyles.ReposList}>
+        we need a for loop in here...
+
+
+      </div>
+
       
     </div>
   );
@@ -82,6 +107,7 @@ function App() {
   return (
     <div className="App">
       <div className={styles.sidebar}>
+
         <h1>Encontrar Dev</h1>  
         <div className={styles.searchbox}>
           <img src={searchsvg} alt="icone de busca"/>
@@ -98,14 +124,15 @@ function App() {
               Buscar
             </button>
         </div>
-
+        
         { showResults ? <Results /> : null }
-
 
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.MainContainer}>
+
         { showDetail ? <UserDetail /> : <Loading /> }
+
       </div>
     </div>
   );

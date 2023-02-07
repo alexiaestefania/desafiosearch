@@ -6,8 +6,10 @@ $bg-cont: #F4F7FE;
 $bg-side: #C9D9FF;
 
 body {
+  overflow: hidden;
   padding: 0%;
   margin: 0%;
+  background-color: rgba(255, 255, 255, 0.6);
 
   input {
     all: unset;
@@ -63,6 +65,7 @@ body {
 
       /* botão de buscar */
       .searchbutton {
+        cursor: pointer;
         box-sizing: border-box;
         width: 75px;
         height: 33px;
@@ -96,7 +99,15 @@ body {
       flex-direction: column;
     }
   }
-  .container {
+  .MainContainer {
     background-color: var($bg-cont);
+    position: relative;
+    left: 450px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    padding: 35px;
   }
 }

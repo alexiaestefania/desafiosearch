@@ -2,7 +2,7 @@ $text-1: #1A235B;
 $text-2: #3A8E3D;
 
 .Indexcard {
-    
+    cursor: pointer;
     width: 380px;
     height: 100px;
     background: rgba(255, 255, 255, 0.6);
@@ -62,19 +62,80 @@ $text-2: #3A8E3D;
     }
 
 }
+h3 {
+    font-family: 'Roboto';
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    color: $text-1;
+}
+
+#detailresult {
+    padding: 15px;
+}
 
 .UserDetail {
     position: relative;
-    display: block;
-    background-color: aqua;
+    display: flex;
     width: 767px;
-    height: 319px;
-    left: 567px;
-    top: 85px;
+    height: 319px;   
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+
+    h1 {
+        color: $text-1;
+        font-family: roboto;
+        font-weight: 800;
+        font-size: 18px;
+        color: $text-1;
+    }
+    h2 {
+        color: $text-2;
+        font-weight: 100px;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 10;
+        font-size: 14px;
+
+    }
+
     img {
+        position: relative;
         border-radius: 100%;
         width: 196px;
         height: 196px;
-        border: 1px solid #1C255C;
+        border: 1px solid  $text-1;
+        margin: auto;
+    }
+
+    .UserStats {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 350px;
+        padding: 20px;
+        background: #F5F5F5;
+        border-radius: 8px;
+        align-items: center;
+        text-align: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 16px;
+        color: $text-1;
+        row-gap: 20px;
+
+        .StatsGridItem {
+            font-weight: 800;
+            font-size: 20px;
+        }
     }
 }
