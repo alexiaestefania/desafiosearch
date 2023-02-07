@@ -27,8 +27,6 @@ function UpdatedDate(ISO: string): string {
   return formatDate;
 }
 
-
-
 function App() {
   const [username, setUsername] = useState("");
   const [handle, setHandle] = useState("Aguardando...");
@@ -71,7 +69,7 @@ function App() {
           <div key={item.id} className={cardstyles.RepoCard}> 
             <a href={item.html_url}>{item.name}</a>
             <span className={cardstyles.Description}>{item.description}</span>
-              <span className={cardstyles.LangDot}></span>
+              <span className={cardstyles.LangDot}> </span>
               <span className={cardstyles.Language}> {item.language}</span>
               <div className={cardstyles.RepoDaterapper}>
                 <p>{CreatedDate(item.created_at)}</p>
@@ -116,7 +114,7 @@ function App() {
             <span className={cardstyles.joindate}>{joindate}</span>
             <h1>{name}</h1>
             <h2>@{handle}</h2>
-            <span>{bio}</span>
+            <span className={cardstyles.desc}>{bio}</span>
             
             <div className={cardstyles.UserStats}>
               <div className={cardstyles.StatsGridH}>Repositórios</div>

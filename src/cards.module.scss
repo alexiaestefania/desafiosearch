@@ -1,9 +1,9 @@
 $text-1: #1A235B;
 $text-2: #3A8E3D;
 $bg-1: #F4F7FE;
-$lang: aqua;
 
 body {
+    overflow: scroll;
     a{
         text-decoration: none;
     }
@@ -157,10 +157,19 @@ h3 {
         row-gap: 20px;
         margin-top: 30px;
 
+        
+
         .StatsGridItem {
             font-weight: 800;
             font-size: 20px;
         }
+
+        
+    }
+
+    .desc {
+        max-width: 450px;
+        display: inline-block;
     }
     
 }
@@ -197,17 +206,29 @@ h3 {
         .Description {
             display: -webkit-box;
             font-size: 11px;
-            -webkit-line-clamp: 3;  // <- you can change rows number
+            -webkit-line-clamp: 3; 
             -webkit-box-orient: vertical;
             width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
+        .LangDot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #3A8E3D;
+            display: inline-block;
+            margin-top: 15px;
+        
+        }
+
 
         .Language {
             font-size: 14px;
             font-weight: 10px;
+            display: inline-block;
+            margin-top: 0px;
         }
 
         .RepoDaterapper {
@@ -217,10 +238,14 @@ h3 {
         }
 
         p {
+            
             line-height: 0px;
             font-size: 11px;
             display: inline-block;
-            margin-top: 0;
+            margin-top: 0px;
+
+           
+            
         }
     }
 }
